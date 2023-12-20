@@ -1,4 +1,10 @@
-## 切换CA,原因是默认的需要邮箱，不愿意研究
+## 先clone项目，原因是需要翻墙
+https://github.com/acmesh-official/acme.sh.git
+cd acme.sh
+./acme.sh --install 
+
+
+## 切换CA,原因是默认zeroSSL 需要邮箱，还未去了解
 acme.sh --set-default-ca --server letsencrypt
 
 ## 通过阿里云的API，进行DNS的验证
@@ -12,5 +18,5 @@ acme.sh --install-cert -d 'nightscout.xilingbm.com' \
 --fullchain-file /etc/nginx/cert/nightscout.xilingbm.com.pem \
 --reloadcmd     "service nginx force-reload" 
 
-## 续签
+## 强制续签
 acme.sh --renew -d 'nightscout.xilingbm.com' --force
