@@ -2,7 +2,8 @@
 https://github.com/acmesh-official/acme.sh.git
 cd acme.sh
 ./acme.sh --install 
-
+### 刷新
+source ~/.bashrc
 
 ## 切换CA,原因是默认zeroSSL 需要邮箱，还未去了解
 acme.sh --set-default-ca --server letsencrypt
@@ -20,3 +21,12 @@ acme.sh --install-cert -d 'nightscout.xilingbm.com' \
 
 ## 强制续签
 acme.sh --renew -d 'nightscout.xilingbm.com' --force
+
+## 查看信息
+acme.sh --info -d 'nightscout.xilingbm.com'
+
+## 脚本自动升级
+acme.sh --upgrade --auto-upgrade
+
+## 其他
+官方推荐的方式是脚本自动化续签。acme.sh的实现方式是全自动，对，你不用进行任何设置，acme.sh会自动在60天后续签，一个键都不用敲！
