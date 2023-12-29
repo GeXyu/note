@@ -9,8 +9,8 @@ source ~/.bashrc
 acme.sh --set-default-ca --server letsencrypt
 
 ## 通过阿里云的API，进行DNS的验证
-export Ali_Secret="fWF5HhfnOv37t0XSI4a7dn6RxwgU12"
-export Ali_Key="LTAI5tR5svjZHLk4W9xTFn3Z"
+export Ali_Secret="xxx"
+export Ali_Key="xxx"
 acme.sh --issue -d 'nightscout.xilingbm.com'  --dns dns_ali
 
 ## 进行安装
